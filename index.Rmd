@@ -97,7 +97,7 @@ Time spend developing operational indicator definition and rational subgroups of
 
 Originally, control charts employed only one test (or rule) for special causes: one or more data points outside the control limits. However, to increase the chart's sensitivity to minor sustained shifts and other patterns of non-random variation, a plethora of supplementary rules have since been developed. To name a few, we have the Western Electric rules (four basic rules plus many more for specialised purposes), the Nelson rules (ten rules), and the Westgard rules (six rules). Most rules are based on identifying non-random patterns in the position of data points relative to the control limits, each with different diagnostic properties.
 
-Furthermore, several distinct sets of rules for runs analysis based on identifying non-random patterns relative the the centre line have been published [@anhoej2015].
+Furthermore, several distinct sets of rules for runs analysis based on identifying non-random patterns relative to the centre line have been published [@anhoej2015].
 
 It may seem tempting to apply as many rules as possible to increase the chance of detecting any signs of special cause variation. However, this strategy comes at a price. While additional rules do increase the sensitivity of SPC analysis, they also raise the risk of false alarms.
 
@@ -119,7 +119,7 @@ If we listen only to the voice of the customer, it may be tempting to treat any 
 
 Unacceptable outcomes may well arise from highly stable and predictable processes -- and conversely, acceptable outcomes may result from unstable ones. Before taking action based on specific outcomes, we must first determine whether they are the result of common cause or special cause variation. This distinction is crucial, as each type of variation calls for a fundamentally different approach to improvement.
 
-Addressing common cause variation requires a thorough redesign of the entire process, while addressing special cause variation involves identifying the root causes of the special cause(s) and either eliminating or reinforcing them, depending on whether they are undesirable or beneficial. 
+Addressing common cause variation requires a thorough redesign of the entire process, while addressing special cause variation involves identifying the root causes of the special cause(s) and either eliminating or reinforcing them, depending on whether they are undesirable or beneficial [@mohammed2004].
 
 The long-term goal of any improvement initiative is to establish stable processes that consistently deliver acceptable results. 
 
@@ -138,7 +138,7 @@ Rephasing involves splitting an SPC chart to recalculate the centre line and con
 
 Figure \@ref(fig:fig2) shows the number of hospital infections (C. diff.) before and after an intervention, which began after month 24.
 
-```{r fig2, fig.cap='Rephasing'}
+```{r fig2, fig.cap='Control chart illustrating two distinct time periods before and after the initiation of an initiative to reduce the rate of hospital infections. Baseline period: months 1-24. Implementation period: months 25-36'}
 pbc(month, n,
     data  = cdi,
     chart = 'i',
@@ -147,12 +147,11 @@ pbc(month, n,
     title = 'Hospital associated C. diff.-infections',
     ylab  = 'Count',
     xlab  = 'Month')
-
 ```
 
 The chart has been rephased following the start of the intervention and the subsequent shift. This correctly distinguishes two distinct periods, each with stable but differing levels of infections.
 
-Automatic rephasing is when the centre line and control limits are recalculated *automatically* after the software detects a shift -- typically triggered by a prolonged run of data points on one side of the centre line. Some software packages perform automatic rephasing by default (@reading2021).
+Automatic rephasing is when the centre line and control limits are recalculated *automatically* after the software detects a shift -- typically triggered by a prolonged run of data points on one side of the centre line. Some software packages perform automatic rephasing by default, e.g. @reading2021.
 
 Coincidentally, the run that signalled the shift began three months before the intervention. However, these months should correctly be considered part of the baseline period. As a result, automatic rephasing would cause the control limits and centre lines to misrepresent the distinct before-and-after periods.
 
@@ -171,13 +170,12 @@ If any of these conditions is not met, we should rather seek to understand the n
 
 Run charts are SPC charts in which the centre line is usually based on the median rather than the mean, and control limits are not shown. Run charts rely solely on runs analysis -- that is, rules based on the length or number of runs of successive data points on either side of the median [@anhoej2014; @anhoej2015; @anhoej2018b].
 
-It is a common and persistent misconception that control charts are inherently superior to run charts in detecting special cause variation (e.g. @carey2002b). Similarly, run charts and control charts are often viewed as fundamentally different methods, warranting distinct terminologies (e.g. @perla2011). We disagree with both notions.
+It is a common and persistent misconception that control charts are inherently superior to run charts in detecting special cause variation (e.g. @carey2002b). Similarly, run charts and control charts are often viewed as fundamentally different methods, warranting distinct terminologies (e.g. @perla2011). We disagree with both notions, and we refer to run charts and control charts collectively as SPC charts -- time series charts that use statistical tests to detect signs of special cause variation.
 
 While runs analyse is not effective in signalling sudden large shifts in data, it is more effective in signalling sustained minor to moderate shifts [@anhoej2018b].
 
-We refer to run charts and control charts collectively as SPC charts -- time series charts that use statistical tests to detect signs of special cause variation.
+Run charts present some advantages over control charts. A key benefit is that run charts are a lot easier to construct than control charts using pen and paper only: plot the dots, and draw a horizontal line that splits data in half.
 
-Run charts present some advantages over control charts. A key benefit is that run charts are a lot easier to construct than control charts using pen and paper only: plot the dots, and draw a horizontal line that splits data in half. 
 Additionally, using the median rather than the mean as the centre line effectively divides the data symmetrically, making the chart largely independent of distributional assumptions and less prone to misapplication. The latter being particularly important in healthcare were many practitioners lack formal statistical training.
 
 Finally, because runs analysis is most effective for detecting minor to moderate sustained shifts, which is ultimately what we seek when aiming to improve processes, run charts may be all that is needed during the improvement phase. Once a satisfactory level of improvement has been achieved, control limits can be added -- along with switching to the mean as the centre line -- to monitor process stability and quickly detect sudden larger, and possibly transient, shifts in the data.
