@@ -27,7 +27,7 @@ options(qic.clshade = FALSE)
 
 ## Introduction
 
-Statistical Process Control (SPC) is a powerful framework for data-driven quality improvement [@anhoej2016; @mountford2016]. However, its effectiveness can be undermined by a range of common missteps. Misinterpretation of data, misuse of SPC charts, and faulty assumptions can lead to wasted effort or missed opportunities, and may ultimately erode trust in SPC itself.
+Statistical Process Control (SPC) is a powerful framework for data-driven quality improvement [@anhoej2016; @mountford2016]. However, its effectiveness can be undermined by a range of common missteps. Misinterpretation of data, misuse of SPC charts, or faulty assumptions can lead to wasted effort or missed opportunities, and may ultimately erode trust in SPC itself.
 
 At is core, SPC involves the plotting of data over time to detect unusual patterns or variations that might indicate a change or problem with a process. This simple graphical device is underpinned by an intuitive theory of variation, the hypothesis-generating testing-cycle of the scientific method, and statistical theory.
 
