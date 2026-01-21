@@ -11,7 +11,7 @@
 
 <meta name="author" content="Jacob Anhøj &amp; Mohammed A. Mohammed" />
 
-<meta name="date" content="2026-01-20" />
+<meta name="date" content="2026-01-21" />
 
 <title>The Problem With Statistical Process Control</title>
 
@@ -361,7 +361,7 @@ display: none;
 
 <h1 class="title toc-ignore">The Problem With Statistical Process Control</h1>
 <h4 class="author">Jacob Anhøj &amp; Mohammed A. Mohammed</h4>
-<h4 class="date">2026-01-20</h4>
+<h4 class="date">2026-01-21</h4>
 
 </div>
 
@@ -452,6 +452,14 @@ Figure 1: Illustrative control charts demonstrating common and special cause var
 </tbody>
 </table>
 </div>
+<div id="a-ship-without-a-captain" class="section level2">
+<h2>A ship without a captain</h2>
+<p>In our experience, the most common misconception about SPC is that quality improvement follows automatically from presenting data in SPC charts. However, SPC charts by themselves do not lead to improvement.</p>
+<p>This misconception likely stems from the view that SPC is merely a statistical technique for identifying outliers or shifts in data over time. However, SPC “is about the continual improvement of processes and outcomes. And it is first and foremost <em>a way of thinking</em> with some tools attached” <span class="citation">[<a href="#ref-wheeler2000">18</a>]</span>.</p>
+<p>Without this <em>way of thinking</em> embedded at all levels of an organisation, SPC charts are no better or worse than any other form of data display. Specifically, it involves understanding variation and recognising that different actions are required depending on whether a process exhibits common or special cause variation.</p>
+<p>Furthermore, it is important to have a systematic strategy to investigate signals of special cause variation. A proper investigation requires a multidisciplinary team combining expertise in data analysis and in the structures and processes under study <span class="citation">[<a href="#ref-mohammed2004">17</a>]</span>.</p>
+<p>Finally, without management support and buy-in to the <em>way of thinking</em>, SPC is unlikely to have any effect. In particular, it is important that managers know how to reconcile the two voices – the voice of the process and the voice of the customer – as discussed earlier.</p>
+</div>
 <div id="automatic-rephasing" class="section level2">
 <h2>Automatic rephasing</h2>
 <p>Rephasing involves splitting an SPC chart to recalculate the centre line and control limits after a sustained shift has been identified.</p>
@@ -463,7 +471,7 @@ Figure 2: Control chart illustrating two distinct time periods before and after 
 </p>
 </div>
 <p>The chart has been <em>intentionally</em> rephased following the start of the intervention and the subsequent shift. This correctly distinguishes two distinct periods, each with stable but differing levels of infections.</p>
-<p>Automatic rephasing is when the centre line and control limits are recalculated <em>automatically</em> after the software detects a shift – typically triggered by a prolonged run of data points on one side of the centre line. Some software packages perform automatic rephasing by default, e.g. <span class="citation">[<a href="#ref-reading2021">18</a>]</span>.</p>
+<p>Automatic rephasing is when the centre line and control limits are recalculated <em>automatically</em> after the software detects a shift – typically triggered by a prolonged run of data points on one side of the centre line. Some software packages perform automatic rephasing by default, e.g. <span class="citation">[<a href="#ref-reading2021">19</a>]</span>.</p>
 <p>Coincidentally, the run that signalled the shift began three months before the intervention. However, these months should correctly be considered part of the baseline period. As a result, automatic rephasing would cause the control limits and centre lines to misrepresent the distinct before-and-after periods.</p>
 <p>We strongly discourage the use of automatic rephasing, as it can lead to misleading interpretations of process stability. By automating shift detection, automatic rephasing effectively removes the essential human insight into the process. Therefore, rephasing should be a deliberate decision made by individuals with a thorough understanding of the process and any associated interventions.</p>
 <p>Rephasing <em>may</em> be appropriate when the following conditions are met:</p>
@@ -477,9 +485,9 @@ Figure 2: Control chart illustrating two distinct time periods before and after 
 </div>
 <div id="the-control-chart-vs-run-chart-debate" class="section level2">
 <h2>The control chart vs run chart debate</h2>
-<p>Run charts are SPC charts in which the centre line is usually based on the median rather than the mean, and control limits are not shown. Run charts rely solely on runs analysis – that is, rules based on the length or number of runs of successive data points on either side of the median <span class="citation">[<a href="#ref-anhoej2015">11</a>,<a href="#ref-anhoej2014">19</a>,<a href="#ref-anhoej2018b">20</a>]</span>.</p>
-<p>It is a common and persistent misconception that control charts are inherently superior to run charts in detecting special cause variation (e.g. Carey 2002 <span class="citation">[<a href="#ref-carey2002b">21</a>]</span>). Similarly, run charts and control charts are often viewed as fundamentally different methods, warranting distinct terminologies (e.g. Perla et al. 2011 <span class="citation">[<a href="#ref-perla2011">13</a>]</span>). We disagree with both notions, and we refer to run charts and control charts collectively as SPC charts – time series charts that use statistical tests to detect signs of special cause variation.</p>
-<p>While runs analyse is not effective in signalling sudden large shifts in data, it is more effective in signalling sustained minor to moderate shifts <span class="citation">[<a href="#ref-anhoej2018b">20</a>]</span>.</p>
+<p>Run charts are SPC charts in which the centre line is usually based on the median rather than the mean, and control limits are not shown. Run charts rely solely on runs analysis – that is, rules based on the length or number of runs of successive data points on either side of the median <span class="citation">[<a href="#ref-anhoej2015">11</a>,<a href="#ref-anhoej2014">20</a>,<a href="#ref-anhoej2018b">21</a>]</span>.</p>
+<p>It is a common and persistent misconception that control charts are inherently superior to run charts in detecting special cause variation (e.g. Carey 2002 <span class="citation">[<a href="#ref-carey2002b">22</a>]</span>). Similarly, run charts and control charts are often viewed as fundamentally different methods, warranting distinct terminologies (e.g. Perla et al. 2011 <span class="citation">[<a href="#ref-perla2011">13</a>]</span>). We disagree with both notions, and we refer to run charts and control charts collectively as SPC charts – time series charts that use statistical tests to detect signs of special cause variation.</p>
+<p>While runs analyse is not effective in signalling sudden large shifts in data, it is more effective in signalling sustained minor to moderate shifts <span class="citation">[<a href="#ref-anhoej2018b">21</a>]</span>.</p>
 <p>Run charts present some advantages over control charts. A key benefit is that run charts are a lot easier to construct than control charts using pen and paper only: plot the dots, and draw a horizontal line that splits data in half.</p>
 <p>Additionally, using the median rather than the mean as the centre line effectively divides the data symmetrically, making the chart largely independent of distributional assumptions and less prone to misapplication. The latter being particularly important in healthcare were many practitioners lack formal statistical training.</p>
 <p>Finally, because runs analysis is most effective for detecting minor to moderate sustained shifts, which is ultimately what we seek when aiming to improve processes, run charts may be all that is needed during the improvement phase. Once a satisfactory level of improvement has been achieved, control limits can be added – along with switching to the mean as the centre line – to monitor process stability and quickly detect sudden larger, and possibly transient, shifts in the data.</p>
@@ -558,17 +566,20 @@ Figure 2: Control chart illustrating two distinct time periods before and after 
 <div id="ref-mohammed2004" class="csl-entry">
 <div class="csl-left-margin">17 </div><div class="csl-right-inline">Mohammed MA, Rathbone A, Myers P, <em>et al.</em> An investigation into general practitioners associated with high patient mortality flagged up through the shipman inquiry: Retrospective analysis of routine data. <em>BMJ</em>. 2004;328:1474–7. doi: <a href="https://doi.org/10.1136/bmj.328.7454.1474">10.1136/bmj.328.7454.1474</a></div>
 </div>
+<div id="ref-wheeler2000" class="csl-entry">
+<div class="csl-left-margin">18 </div><div class="csl-right-inline">Wheeler DJ. <em>Understanding variation – the key to managing chaos</em>. Knoxville, Tennessee: SPC Press 2000.</div>
+</div>
 <div id="ref-reading2021" class="csl-entry">
-<div class="csl-left-margin">18 </div><div class="csl-right-inline">Reading C, Wellesley-Miller S, Turner Z, <em>et al.</em> <em><a href="https://doi.org/10.32614/CRAN.package.NHSRplotthedots">NHSRplotthedots: Draw XmR charts for NHSE/i ’making data count’ programme</a></em>. 2021.</div>
+<div class="csl-left-margin">19 </div><div class="csl-right-inline">Reading C, Wellesley-Miller S, Turner Z, <em>et al.</em> <em><a href="https://doi.org/10.32614/CRAN.package.NHSRplotthedots">NHSRplotthedots: Draw XmR charts for NHSE/i ’making data count’ programme</a></em>. 2021.</div>
 </div>
 <div id="ref-anhoej2014" class="csl-entry">
-<div class="csl-left-margin">19 </div><div class="csl-right-inline">Anhøj J, Olesen AV. Run charts revisited: A simulation study of run chart rules for detection of non-random variation in health care processes. <em>PLoS ONE</em>. Published Online First: 2014. doi: <a href="https://doi.org/10.1371/journal.pone.0113825">10.1371/journal.pone.0113825</a></div>
+<div class="csl-left-margin">20 </div><div class="csl-right-inline">Anhøj J, Olesen AV. Run charts revisited: A simulation study of run chart rules for detection of non-random variation in health care processes. <em>PLoS ONE</em>. Published Online First: 2014. doi: <a href="https://doi.org/10.1371/journal.pone.0113825">10.1371/journal.pone.0113825</a></div>
 </div>
 <div id="ref-anhoej2018b" class="csl-entry">
-<div class="csl-left-margin">20 </div><div class="csl-right-inline">Anhøj J, Wentzel-Larsen T. Sense and sensibility: On the diagnostic value of control chart rules for detection of shifts in time series data. <em>BMC Medical Research Methodology</em>. Published Online First: 2018. doi: <a href="https://doi.org/10.1186/s12874-018-0564-0">10.1186/s12874-018-0564-0</a></div>
+<div class="csl-left-margin">21 </div><div class="csl-right-inline">Anhøj J, Wentzel-Larsen T. Sense and sensibility: On the diagnostic value of control chart rules for detection of shifts in time series data. <em>BMC Medical Research Methodology</em>. Published Online First: 2018. doi: <a href="https://doi.org/10.1186/s12874-018-0564-0">10.1186/s12874-018-0564-0</a></div>
 </div>
 <div id="ref-carey2002b" class="csl-entry">
-<div class="csl-left-margin">21 </div><div class="csl-right-inline">Carey RG. How do you know that your care is improving? Part 2: Using control charts to learn from your data. <em>J Ambulatory Care Manage</em>. 2002;25(2):78–88.</div>
+<div class="csl-left-margin">22 </div><div class="csl-right-inline">Carey RG. How do you know that your care is improving? Part 2: Using control charts to learn from your data. <em>J Ambulatory Care Manage</em>. 2002;25(2):78–88.</div>
 </div>
 </div>
 </div>
