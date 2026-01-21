@@ -23,6 +23,8 @@ library(qicharts2)
 options(qic.clshade = FALSE)
 ```
 
+Source: https://github.com/anhoej/spc_problem
+
 ----
 
 ## Introduction
