@@ -8,7 +8,7 @@ output:
 bibliography: references.bib
 csl: bmj-quality-and-safety.csl
 link-citations: yes
-# css: style.css
+css: style.css
 editor_options: 
   chunk_output_type: console
 ---
@@ -137,17 +137,17 @@ The two voices and the corresponding four appropriate actions are summarised in 
 
 Table: Table 1: The interplay between the voice of the customer and the voice of the process, with the four appropriate actions for each scenario.
 
-## A ship without a captain
+## Signals in the void
 
 In our experience, the most common misconception about SPC is that quality improvement follows automatically from presenting data in SPC charts. However, SPC charts by themselves do not lead to improvement.
 
 This misconception likely stems from the view that SPC is merely a statistical technique for identifying outliers or shifts in data over time. However, SPC “is about the continual improvement of processes and outcomes. And it is first and foremost *a way of thinking* with some tools attached” [@wheeler2000].
 
-Without this *way of thinking* embedded at all levels of an organisation, SPC charts are no better or worse than any other form of data display. Specifically, it involves understanding variation and recognising that different actions are required depending on whether a process exhibits common or special cause variation.
+Without this *way of thinking* embedded at all levels of an organisation, SPC charts are no better or worse than any other form of data display. Specifically, the thinking involves understanding variation and recognising that different actions are required depending on whether a process exhibits common or special cause variation.
 
 Furthermore, it is important to have a systematic strategy to investigate signals of special cause variation. A proper investigation requires a multidisciplinary team combining expertise in data analysis and in the structures and processes under study [@mohammed2004].
 
-Finally, without management support and buy-in to the *way of thinking*, SPC is unlikely to have any effect. In particular, it is important that managers know how to reconcile the two voices -- the voice of the process and the voice of the customer -- as discussed earlier.
+Finally, without management support and buy-in to the *way of thinking*, SPC is unlikely to have any effect. In particular, it is important that managers know how to reconcile *the two voices* -- the voice of the process and the voice of the customer -- as discussed earlier.
 
 ## Automatic rephasing
 

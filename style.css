@@ -1,5 +1,5 @@
 p.caption {
-  color: #777;
+  color: #666;
   margin-top: 10px;
 }
 p code {
@@ -19,7 +19,7 @@ h1, h2, h3, h4 {
 
 table caption {
   text-align: left;
-  color: #777;
+  color: #666;
 }
 
 pre.numberSource code > span > a:first-child::before {
