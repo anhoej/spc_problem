@@ -11,7 +11,7 @@
 
 <meta name="author" content="Jacob Anhøj &amp; Mohammed A. Mohammed" />
 
-<meta name="date" content="2026-01-21" />
+<meta name="date" content="2026-01-22" />
 
 <title>The Problem With Statistical Process Control</title>
 
@@ -386,7 +386,7 @@ display: none;
 
 <h1 class="title toc-ignore">The Problem With Statistical Process Control</h1>
 <h4 class="author">Jacob Anhøj &amp; Mohammed A. Mohammed</h4>
-<h4 class="date">2026-01-21</h4>
+<h4 class="date">2026-01-22</h4>
 
 </div>
 
@@ -425,20 +425,11 @@ Figure 1: Illustrative control charts demonstrating common and special cause var
 <p>A rational subgroup consists of a set of measurements or counts that are:</p>
 <ul>
 <li>produced under conditions that are as similar as possible,</li>
-<li>taken close together in time and space, and likely to show only common cause variation.</li>
+<li>taken closely together in time and space, and likely to show only common cause variation.</li>
 </ul>
 <p>The underlying logic is that when subgroups are rationally formed, variation within subgroups reflects common cause variation, whereas variation between subgroups that exceeds what is expected from within-subgroup variation indicates the presence of special causes.</p>
 <p>In our experience – particularly in healthcare – rational subgrouping is something of a forgotten art. We often rely on whatever data are readily available, which are frequently pre-aggregated into monthly, quarterly, or even yearly time periods for administrative purposes rather than for quality improvement. This practice often leads to suboptimal use of data for driving improvement.</p>
 <p>Thus, time spend developing operational indicator definition and rational subgroups often yields significant returns. Investing effort upfront ensures that data are meaningful and comparable, enabling better decision-making.</p>
-</div>
-<div id="signal-fatigue-from-over-sensitive-spc-rules" class="section level2">
-<h2>Signal fatigue from over-sensitive SPC rules</h2>
-<p>Originally, control charts employed only one test (or rule) for special causes: one or more data points outside the control limits. However, to increase the chart’s sensitivity to minor sustained shifts and other patterns of non-random variation, a plethora of supplementary rules have since been developed. To name a few, we have the Western Electric rules <span class="citation">[<a href="#ref-we1956">8</a>]</span> (four basic rules plus many more for specialised purposes), the Nelson rules <span class="citation">[<a href="#ref-nelson1984">9</a>]</span> (eight rules), and the Westgard rules <span class="citation">[<a href="#ref-harel2008">10</a>]</span> (six rules). Most rules are based on identifying non-random patterns in the position of data points relative to the control limits, each with different diagnostic properties.</p>
-<p>Furthermore, several distinct sets of rules for runs analysis based on identifying non-random patterns relative to the centre line have been published <span class="citation">[<a href="#ref-anhoej2015">11</a>]</span>.</p>
-<p>It may seem tempting to apply as many rules as possible to increase the chance of detecting any signs of special cause variation. However, this strategy comes at a price. While additional rules do increase the sensitivity of SPC analysis, they also raise the risk of false alarms.</p>
-<p>Apart from the risk of applying too many rules, the rules themselves may also be either overly sensitive or insufficiently sensitive. A prominent example is a commonly used set of runs rules – including four tests for trends, shifts, and too many or too few runs respectively – adopted by many healthcare organisations <span class="citation">[<a href="#ref-provost2011">12</a>,<a href="#ref-perla2011">13</a>]</span>. This particular set has been shown to produce a very high rate of false signals. For instance, in a run chart with 24 data points, the expected false positive rate is close to 50% <span class="citation">[<a href="#ref-anhoej2015">11</a>]</span>. The main contributor is the trend rule – defined as five or more consecutive data points all increasing or decreasing. Short trends like this are very common, even in sequences of purely random numbers. Moreover, trend rules in general have been thoroughly studied and found to be, at best, unhelpful and, at worst, misleading <span class="citation">[<a href="#ref-davis1988">14</a>]</span>.</p>
-<p>To make matters worse, some practitioners deliberately tighten control limits in an attempt to increase the sensitivity of the sigma rule. This behaviour often stems from another common mistake: using the overall standard deviation to calculate control limits <span class="citation">[<a href="#ref-wheeler2010">15</a>,<a href="#ref-wheeler2016">16</a>]</span>. As emphasised in the introduction, the overall variation is not appropriate for this purpose, as it includes both common cause and special cause variation – ultimately inflating the control limits. Inflated limits can, in turn, prompt misguided attempts to narrow them artificially. Instead, control limits, set at ±3 SD from the centre line, should be based on the estimated within-subgroup standard deviation from rationally formed subgroups. This approach captures common cause variation and provides a sound basis for meaningful process monitoring and improvement.</p>
-<p>To avoid signal fatigue – which, at best, results in wasted effort from chasing false signals – we recommend that practitioners select their rules carefully, focusing on capturing patterns that are most likely to signal special cause variation in their specific context, while keeping acceptable false alarm rates.</p>
 </div>
 <div id="confusing-the-voice-of-the-customer-with-the-voice-of-the-process" class="section level2">
 <h2>Confusing the voice of the customer with the voice of the process</h2>
@@ -447,15 +438,15 @@ Figure 1: Illustrative control charts demonstrating common and special cause var
 <p>The voice of the customer is often expressed through specification limits that define the desired level of outcomes. These limits may take the form of an upper or lower acceptance threshold, or an interval specifying the acceptable range for a given outcome. For example, based on literature reviews or results from comparable units, it may be determined that an acute caesarean section should be completed within 30 minutes of the decision to operate. Any procedure taking longer than this would be considered unacceptable.</p>
 <p>If we listen only to the voice of the customer, it may be tempting to treat any caesarean section taking longer than 30 minutes as a special cause – and perhaps even initiate a root cause analysis in each case. However, without also considering the voice of the process – which tells us whether the process is stable and what it is actually capable of, as indicated by the control limits – such an approach is flawed.</p>
 <p>Unacceptable outcomes may well arise from highly stable and predictable processes – and conversely, acceptable outcomes may result from unstable ones. Before taking action based on specific outcomes, we must first determine whether they are the result of common cause or special cause variation. This distinction is crucial, as each type of variation calls for a fundamentally different approach to improvement.</p>
-<p>Addressing common cause variation requires a thorough redesign of the entire process, while addressing special cause variation involves identifying its root cause(s) and either eliminating or reinforcing them, depending on whether they are undesirable or beneficial <span class="citation">[<a href="#ref-mohammed2004">17</a>]</span>.</p>
+<p>Addressing common cause variation requires a thorough redesign of the entire process, while addressing special cause variation involves identifying its root cause(s) and either eliminating or reinforcing them, depending on whether they are undesirable or beneficial <span class="citation">[<a href="#ref-mohammed2004">8</a>]</span>.</p>
 <p>The long-term goal of any improvement initiative is to establish stable processes that consistently deliver acceptable results.</p>
 <p>The two voices and the corresponding four appropriate actions are summarised in Table 1.</p>
 <table>
 <caption>Table 1: The interplay between the voice of the customer and the voice of the process, with the four appropriate actions for each scenario.</caption>
 <colgroup>
-<col width="23%" />
-<col width="37%" />
-<col width="39%" />
+<col width="20%" />
+<col width="33%" />
+<col width="45%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -467,13 +458,13 @@ Figure 1: Illustrative control charts demonstrating common and special cause var
 <tbody>
 <tr class="odd">
 <td><strong>Customer Satisfied</strong></td>
-<td>OK – hands off and continue to monitor</td>
-<td>Trouble ahead – stabilise the process</td>
+<td>OK: hands off and continue to monitor</td>
+<td>Trouble ahead: investigate and stabilise the process</td>
 </tr>
 <tr class="even">
 <td><strong>Customer Unsatisfied</strong></td>
-<td>Trouble now – revise the process</td>
-<td>Chaos – revise and stabilise the process</td>
+<td>Trouble now: revise the process</td>
+<td>Chaos: investigate, stabilise, and revise the process</td>
 </tr>
 </tbody>
 </table>
@@ -481,10 +472,19 @@ Figure 1: Illustrative control charts demonstrating common and special cause var
 <div id="signals-in-the-void" class="section level2">
 <h2>Signals in the void</h2>
 <p>In our experience, the most common misconception about SPC is that quality improvement follows automatically from presenting data in SPC charts. However, SPC charts by themselves do not lead to improvement.</p>
-<p>This misconception likely stems from the view that SPC is merely a statistical technique for identifying outliers or shifts in data over time. However, SPC “is about the continual improvement of processes and outcomes. And it is first and foremost <em>a way of thinking</em> with some tools attached” <span class="citation">[<a href="#ref-wheeler2000">18</a>]</span>.</p>
+<p>This misconception likely stems from the view that SPC is merely a statistical technique for identifying outliers or shifts in data over time. However, as Don Wheeler note: SPC “is about the continual improvement of processes and outcomes. And it is first and foremost <em>a way of thinking</em> with some tools attached” <span class="citation">[<a href="#ref-wheeler2000">9</a>]</span>.</p>
 <p>Without this <em>way of thinking</em> embedded at all levels of an organisation, SPC charts are no better or worse than any other form of data display. Specifically, the thinking involves understanding variation and recognising that different actions are required depending on whether a process exhibits common or special cause variation.</p>
-<p>Furthermore, it is important to have a systematic strategy to investigate signals of special cause variation. A proper investigation requires a multidisciplinary team combining expertise in data analysis and in the structures and processes under study <span class="citation">[<a href="#ref-mohammed2004">17</a>]</span>.</p>
+<p>Furthermore, it is important to have a systematic strategy to investigate signals of special cause variation. A proper investigation requires a multidisciplinary team combining expertise in data analysis and in the structures and processes under study <span class="citation">[<a href="#ref-mohammed2004">8</a>]</span>.</p>
 <p>Finally, without management support and buy-in to the <em>way of thinking</em>, SPC is unlikely to have any effect. In particular, it is important that managers know how to reconcile <em>the two voices</em> – the voice of the process and the voice of the customer – as discussed earlier.</p>
+</div>
+<div id="signal-fatigue-from-over-sensitive-spc-rules" class="section level2">
+<h2>Signal fatigue from over-sensitive SPC rules</h2>
+<p>Originally, control charts employed only one test (or rule) for special causes: one or more data points outside the control limits. However, to increase the chart’s sensitivity to minor sustained shifts and other patterns of non-random variation, a plethora of supplementary rules have since been developed. To name a few, we have the Western Electric rules <span class="citation">[<a href="#ref-we1956">10</a>]</span> (four basic rules plus many more for specialised purposes), the Nelson rules <span class="citation">[<a href="#ref-nelson1984">11</a>]</span> (eight rules), and the Westgard rules <span class="citation">[<a href="#ref-harel2008">12</a>]</span> (six rules). Most rules are based on identifying non-random patterns in the position of data points relative to the control limits, each with different diagnostic properties.</p>
+<p>Furthermore, several distinct sets of rules for runs analysis based on identifying non-random patterns relative to the centre line have been published <span class="citation">[<a href="#ref-anhoej2015">13</a>]</span>.</p>
+<p>It may seem tempting to apply as many rules as possible to increase the chance of detecting any signs of special cause variation. However, this strategy comes at a price. While additional rules do increase the sensitivity of SPC analysis, they also raise the risk of false alarms.</p>
+<p>Apart from the risk of applying too many rules, the rules themselves may also be either overly sensitive or insufficiently sensitive. A prominent example is a commonly used set of runs rules – including four tests for trends, shifts, and too many or too few runs respectively – adopted by many healthcare organisations <span class="citation">[<a href="#ref-provost2011">14</a>,<a href="#ref-perla2011">15</a>]</span>. This particular set has been shown to produce a very high rate of false signals. For instance, in a run chart with 24 data points, the expected false positive rate is close to 50% <span class="citation">[<a href="#ref-anhoej2015">13</a>]</span>. The main contributor is the trend rule – defined as five or more consecutive data points all increasing or decreasing. Short trends like this are very common, even in sequences of purely random numbers. Moreover, trend rules in general have been thoroughly studied and found to be, at best, unhelpful and, at worst, misleading <span class="citation">[<a href="#ref-davis1988">16</a>]</span>.</p>
+<p>To make matters worse, some practitioners deliberately tighten control limits in an attempt to increase the sensitivity of the sigma rule. This behaviour often stems from another common mistake: using the overall standard deviation to calculate control limits <span class="citation">[<a href="#ref-wheeler2010">17</a>,<a href="#ref-wheeler2016">18</a>]</span>. As emphasised in the introduction, the overall variation is not appropriate for this purpose, as it includes both common cause and special cause variation – ultimately inflating the control limits. Inflated limits can, in turn, prompt misguided attempts to narrow them artificially. Instead, control limits, set at ±3 SD from the centre line, should be based on the estimated within-subgroup standard deviation from rationally formed subgroups. This approach captures common cause variation and provides a sound basis for meaningful process monitoring and improvement.</p>
+<p>To avoid signal fatigue – which, at best, results in wasted effort from chasing false signals – we recommend that practitioners select their rules carefully, focusing on capturing patterns that are most likely to signal special cause variation in their specific context, while keeping acceptable false alarm rates.</p>
 </div>
 <div id="automatic-rephasing" class="section level2">
 <h2>Automatic rephasing</h2>
@@ -511,8 +511,8 @@ Figure 2: Control chart illustrating two distinct time periods before and after 
 </div>
 <div id="the-control-chart-vs-run-chart-debate" class="section level2">
 <h2>The control chart vs run chart debate</h2>
-<p>Run charts are SPC charts in which the centre line is usually based on the median rather than the mean, and control limits are not shown. Run charts rely solely on runs analysis – that is, rules based on the length or number of runs of successive data points on either side of the median <span class="citation">[<a href="#ref-anhoej2015">11</a>,<a href="#ref-anhoej2014">20</a>,<a href="#ref-anhoej2018b">21</a>]</span>.</p>
-<p>It is a common and persistent misconception that control charts are inherently superior to run charts in detecting special cause variation (e.g. Carey 2002 <span class="citation">[<a href="#ref-carey2002b">22</a>]</span>). Similarly, run charts and control charts are often viewed as fundamentally different methods, warranting distinct terminologies (e.g. Perla et al. 2011 <span class="citation">[<a href="#ref-perla2011">13</a>]</span>). We disagree with both notions, and we refer to run charts and control charts collectively as SPC charts – time series charts that use statistical tests to detect signs of special cause variation.</p>
+<p>Run charts are SPC charts in which the centre line is usually based on the median rather than the mean, and control limits are not shown. Run charts rely solely on runs analysis – that is, rules based on the length or number of runs of successive data points on either side of the median <span class="citation">[<a href="#ref-anhoej2015">13</a>,<a href="#ref-anhoej2014">20</a>,<a href="#ref-anhoej2018b">21</a>]</span>.</p>
+<p>It is a common and persistent misconception that control charts are inherently superior to run charts in detecting special cause variation (e.g. Carey 2002 <span class="citation">[<a href="#ref-carey2002b">22</a>]</span>). Similarly, run charts and control charts are often viewed as fundamentally different methods, warranting distinct terminologies (e.g. Perla et al. 2011 <span class="citation">[<a href="#ref-perla2011">15</a>]</span>). We disagree with both notions, and we refer to run charts and control charts collectively as SPC charts – time series charts that use statistical tests to detect signs of special cause variation.</p>
 <p>While runs analyse is not effective in signalling sudden large shifts in data, it is more effective in signalling sustained minor to moderate shifts <span class="citation">[<a href="#ref-anhoej2018b">21</a>]</span>.</p>
 <p>Run charts present some advantages over control charts. A key benefit is that run charts are a lot easier to construct than control charts using pen and paper only: plot the dots, and draw a horizontal line that splits data in half.</p>
 <p>Additionally, using the median rather than the mean as the centre line effectively divides the data symmetrically, making the chart largely independent of distributional assumptions and less prone to misapplication. The latter being particularly important in healthcare were many practitioners lack formal statistical training.</p>
@@ -520,13 +520,14 @@ Figure 2: Control chart illustrating two distinct time periods before and after 
 </div>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
-<p>While SPC is a powerful framework for data-driven quality improvement, its effectiveness is often compromised by poor data, misuse of charts, and faulty assumptions, which can lead to wasted effort, missed opportunities, and diminished confidence in the method. Effective SPC requires understanding variation, rational subgrouping of data, careful selection of rules, and disciplined interpretation. When applied correctly, it remains a robust tool for learning, decision-making, and sustained quality improvement.</p>
+<p>While SPC is a powerful framework for data-driven quality improvement, its effectiveness is often compromised by poor data, insufficient management support, misuse of charts, and faulty assumptions, which can lead to wasted effort, missed opportunities, and diminished confidence in the method. Effective SPC requires understanding variation, rational subgrouping of data, careful selection of rules, and disciplined interpretation. When applied correctly, it remains a robust tool for learning, decision-making, and sustained quality improvement.</p>
 </div>
 <div id="what-this-paper-adds-to-the-area-of-knowledge" class="section level2">
 <h2>What this paper adds to the area of knowledge</h2>
 <p>While SPC is a powerful framework for data-driven quality improvement, its usefulness and effectiveness of SPC is often compromised by:</p>
 <ul>
 <li>poor data,</li>
+<li>insufficient management support,</li>
 <li>misuse of charts, and</li>
 <li>faulty assumptions.</li>
 </ul>
@@ -562,38 +563,38 @@ Figure 2: Control chart illustrating two distinct time periods before and after 
 <div id="ref-montgomery2020" class="csl-entry">
 <div class="csl-left-margin">7 </div><div class="csl-right-inline">Montgomery DC. <em>Introduction to statistical quality control, eighths ed.</em> Wiley 2020.</div>
 </div>
-<div id="ref-we1956" class="csl-entry">
-<div class="csl-left-margin">8 </div><div class="csl-right-inline">Western Electric Company. <em>Statistical quality control handbook</em>. New York: Western Electric Company inc. 1956.</div>
-</div>
-<div id="ref-nelson1984" class="csl-entry">
-<div class="csl-left-margin">9 </div><div class="csl-right-inline">Nelson LS. The shewhart control chart—tests for special causes. <em>Journal of Quality Technology</em>. 1984;16:237–9. doi: <a href="https://doi.org/10.1080/00224065.1984.11978921">10.1080/00224065.1984.11978921</a></div>
-</div>
-<div id="ref-harel2008" class="csl-entry">
-<div class="csl-left-margin">10 </div><div class="csl-right-inline">Harel O, Schisterman EF, Vexler A, <em>et al.</em> Monitoring quality control: Can we get better data? <em>Epidemiology</em>. Published Online First: 2008. doi: <a href="https://doi.org/10.1097/EDE.0b013e318176bfb2">10.1097/EDE.0b013e318176bfb2</a></div>
-</div>
-<div id="ref-anhoej2015" class="csl-entry">
-<div class="csl-left-margin">11 </div><div class="csl-right-inline">Anhøj J. Diagnostic value of run chart analysis: Using likelihood ratios to compare run chart rules on simulated data series. <em>PLoS ONE</em>. Published Online First: 2015. doi: <a href="https://doi.org/10.1371/journal.pone.0121349">10.1371/journal.pone.0121349</a></div>
-</div>
-<div id="ref-provost2011" class="csl-entry">
-<div class="csl-left-margin">12 </div><div class="csl-right-inline">Provost LP, Murray SK. <em>The health care data guide: Learning from data for improvement</em>. San Francisco: John Wiley &amp; Sons Inc. 2011.</div>
-</div>
-<div id="ref-perla2011" class="csl-entry">
-<div class="csl-left-margin">13 </div><div class="csl-right-inline">Perla RJ, Provost LP, Murray SK. The run chart: A simple analytical tool for learning from variation in healthcare processes. <em>BMJ Qual Saf</em>. 2011;20:46–51. doi: <a href="https://doi.org/10.1136/bmjqs.2009.037895">10.1136/bmjqs.2009.037895</a></div>
-</div>
-<div id="ref-davis1988" class="csl-entry">
-<div class="csl-left-margin">14 </div><div class="csl-right-inline">Davis RB, Woodall WH. Performance of the control chart trend rule under linear shift. <em>Journal of Quality Technology</em>. 1988;20:260–2.</div>
-</div>
-<div id="ref-wheeler2010" class="csl-entry">
-<div class="csl-left-margin">15 </div><div class="csl-right-inline">Wheeler DJ. The right and wrong ways of computing limits. 2010. <a href="https://www.spcpress.com/pdf/DJW205.pdf">https://www.spcpress.com/pdf/DJW205.pdf</a> (accessed 14 June 2025)</div>
-</div>
-<div id="ref-wheeler2016" class="csl-entry">
-<div class="csl-left-margin">16 </div><div class="csl-right-inline">Wheeler DJ. The levey-jennings chart – how to get the most out of your measurement system. 2016. <a href="http://www.spcpress.com/pdf/DJW290.pdf">http://www.spcpress.com/pdf/DJW290.pdf</a> (accessed 14 June 2025)</div>
-</div>
 <div id="ref-mohammed2004" class="csl-entry">
-<div class="csl-left-margin">17 </div><div class="csl-right-inline">Mohammed MA, Rathbone A, Myers P, <em>et al.</em> An investigation into general practitioners associated with high patient mortality flagged up through the shipman inquiry: Retrospective analysis of routine data. <em>BMJ</em>. 2004;328:1474–7. doi: <a href="https://doi.org/10.1136/bmj.328.7454.1474">10.1136/bmj.328.7454.1474</a></div>
+<div class="csl-left-margin">8 </div><div class="csl-right-inline">Mohammed MA, Rathbone A, Myers P, <em>et al.</em> An investigation into general practitioners associated with high patient mortality flagged up through the shipman inquiry: Retrospective analysis of routine data. <em>BMJ</em>. 2004;328:1474–7. doi: <a href="https://doi.org/10.1136/bmj.328.7454.1474">10.1136/bmj.328.7454.1474</a></div>
 </div>
 <div id="ref-wheeler2000" class="csl-entry">
-<div class="csl-left-margin">18 </div><div class="csl-right-inline">Wheeler DJ. <em>Understanding variation – the key to managing chaos</em>. Knoxville, Tennessee: SPC Press 2000.</div>
+<div class="csl-left-margin">9 </div><div class="csl-right-inline">Wheeler DJ. <em>Understanding variation – the key to managing chaos</em>. Knoxville, Tennessee: SPC Press 2000.</div>
+</div>
+<div id="ref-we1956" class="csl-entry">
+<div class="csl-left-margin">10 </div><div class="csl-right-inline">Western Electric Company. <em>Statistical quality control handbook</em>. New York: Western Electric Company inc. 1956.</div>
+</div>
+<div id="ref-nelson1984" class="csl-entry">
+<div class="csl-left-margin">11 </div><div class="csl-right-inline">Nelson LS. The shewhart control chart—tests for special causes. <em>Journal of Quality Technology</em>. 1984;16:237–9. doi: <a href="https://doi.org/10.1080/00224065.1984.11978921">10.1080/00224065.1984.11978921</a></div>
+</div>
+<div id="ref-harel2008" class="csl-entry">
+<div class="csl-left-margin">12 </div><div class="csl-right-inline">Harel O, Schisterman EF, Vexler A, <em>et al.</em> Monitoring quality control: Can we get better data? <em>Epidemiology</em>. Published Online First: 2008. doi: <a href="https://doi.org/10.1097/EDE.0b013e318176bfb2">10.1097/EDE.0b013e318176bfb2</a></div>
+</div>
+<div id="ref-anhoej2015" class="csl-entry">
+<div class="csl-left-margin">13 </div><div class="csl-right-inline">Anhøj J. Diagnostic value of run chart analysis: Using likelihood ratios to compare run chart rules on simulated data series. <em>PLoS ONE</em>. Published Online First: 2015. doi: <a href="https://doi.org/10.1371/journal.pone.0121349">10.1371/journal.pone.0121349</a></div>
+</div>
+<div id="ref-provost2011" class="csl-entry">
+<div class="csl-left-margin">14 </div><div class="csl-right-inline">Provost LP, Murray SK. <em>The health care data guide: Learning from data for improvement</em>. San Francisco: John Wiley &amp; Sons Inc. 2011.</div>
+</div>
+<div id="ref-perla2011" class="csl-entry">
+<div class="csl-left-margin">15 </div><div class="csl-right-inline">Perla RJ, Provost LP, Murray SK. The run chart: A simple analytical tool for learning from variation in healthcare processes. <em>BMJ Qual Saf</em>. 2011;20:46–51. doi: <a href="https://doi.org/10.1136/bmjqs.2009.037895">10.1136/bmjqs.2009.037895</a></div>
+</div>
+<div id="ref-davis1988" class="csl-entry">
+<div class="csl-left-margin">16 </div><div class="csl-right-inline">Davis RB, Woodall WH. Performance of the control chart trend rule under linear shift. <em>Journal of Quality Technology</em>. 1988;20:260–2.</div>
+</div>
+<div id="ref-wheeler2010" class="csl-entry">
+<div class="csl-left-margin">17 </div><div class="csl-right-inline">Wheeler DJ. The right and wrong ways of computing limits. 2010. <a href="https://www.spcpress.com/pdf/DJW205.pdf">https://www.spcpress.com/pdf/DJW205.pdf</a> (accessed 14 June 2025)</div>
+</div>
+<div id="ref-wheeler2016" class="csl-entry">
+<div class="csl-left-margin">18 </div><div class="csl-right-inline">Wheeler DJ. The levey-jennings chart – how to get the most out of your measurement system. 2016. <a href="http://www.spcpress.com/pdf/DJW290.pdf">http://www.spcpress.com/pdf/DJW290.pdf</a> (accessed 14 June 2025)</div>
 </div>
 <div id="ref-reading2021" class="csl-entry">
 <div class="csl-left-margin">19 </div><div class="csl-right-inline">Reading C, Wellesley-Miller S, Turner Z, <em>et al.</em> <em><a href="https://doi.org/10.32614/CRAN.package.NHSRplotthedots">NHSRplotthedots: Draw XmR charts for NHSE/i ’making data count’ programme</a></em>. 2021.</div>

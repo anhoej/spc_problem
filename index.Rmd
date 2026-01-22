@@ -90,27 +90,13 @@ Rational subgrouping is the intentional and intelligent sampling and grouping of
 A rational subgroup consists of a set of measurements or counts that are:
 
 * produced under conditions that are as similar as possible,
-* taken close together in time and space, and likely to show only common cause variation.
+* taken closely together in time and space, and likely to show only common cause variation.
 
 The underlying logic is that when subgroups are rationally formed, variation within subgroups reflects common cause variation, whereas variation between subgroups that exceeds what is expected from within-subgroup variation indicates the presence of special causes.
 
 In our experience – particularly in healthcare – rational subgrouping is something of a forgotten art. We often rely on whatever data are readily available, which are frequently pre-aggregated into monthly, quarterly, or even yearly time periods for administrative purposes rather than for quality improvement. This practice often leads to suboptimal use of data for driving improvement.
 
 Thus, time spend developing operational indicator definition and rational subgroups often yields significant returns. Investing effort upfront ensures that data are meaningful and comparable, enabling better decision-making.
-
-## Signal fatigue from over-sensitive SPC rules
-
-Originally, control charts employed only one test (or rule) for special causes: one or more data points outside the control limits. However, to increase the chart's sensitivity to minor sustained shifts and other patterns of non-random variation, a plethora of supplementary rules have since been developed. To name a few, we have the Western Electric rules [@we1956] (four basic rules plus many more for specialised purposes), the Nelson rules [@nelson1984] (eight rules), and the Westgard rules [@harel2008] (six rules). Most rules are based on identifying non-random patterns in the position of data points relative to the control limits, each with different diagnostic properties.
-
-Furthermore, several distinct sets of rules for runs analysis based on identifying non-random patterns relative to the centre line have been published [@anhoej2015].
-
-It may seem tempting to apply as many rules as possible to increase the chance of detecting any signs of special cause variation. However, this strategy comes at a price. While additional rules do increase the sensitivity of SPC analysis, they also raise the risk of false alarms.
-
-Apart from the risk of applying too many rules, the rules themselves may also be either overly sensitive or insufficiently sensitive. A prominent example is a commonly used set of runs rules -- including four tests for trends, shifts, and too many or too few runs respectively -- adopted by many healthcare organisations [@provost2011; @perla2011]. This particular set has been shown to produce a very high rate of false signals. For instance, in a run chart with 24 data points, the expected false positive rate is close to 50% [@anhoej2015]. The main contributor is the trend rule -- defined as five or more consecutive data points all increasing or decreasing. Short trends like this are very common, even in sequences of purely random numbers. Moreover, trend rules in general have been thoroughly studied and found to be, at best, unhelpful and, at worst, misleading [@davis1988].
-
-To make matters worse, some practitioners deliberately tighten control limits in an attempt to increase the sensitivity of the sigma rule. This behaviour often stems from another common mistake: using the overall standard deviation to calculate control limits [@wheeler2010; @wheeler2016]. As emphasised in the introduction, the overall variation is not appropriate for this purpose, as it includes both common cause and special cause variation -- ultimately inflating the control limits. Inflated limits can, in turn, prompt misguided attempts to narrow them artificially. Instead, control limits, set at ±3 SD from the centre line, should be based on the estimated within-subgroup standard deviation from rationally formed subgroups. This approach captures common cause variation and provides a sound basis for meaningful process monitoring and improvement.
-
-To avoid signal fatigue -- which, at best, results in wasted effort from chasing false signals -- we recommend that practitioners select their rules carefully, focusing on capturing patterns that are most likely to signal special cause variation in their specific context, while keeping acceptable false alarm rates.
 
 ## Confusing the voice of the customer with the voice of the process
 
@@ -130,10 +116,10 @@ The long-term goal of any improvement initiative is to establish stable processe
 
 The two voices and the corresponding four appropriate actions are summarised in Table 1.
 
-|                          | **Process Stable**                      | **Process Unstable**                      |
-| ------------------------ | --------------------------------------- | ----------------------------------------- |
-| **Customer Satisfied**   | OK -- hands off and continue to monitor | Trouble ahead -- stabilise the process    |
-| **Customer Unsatisfied** | Trouble now -- revise the process       | Chaos -- revise and stabilise the process |
+|                          | **Process Stable**                      | **Process Unstable**                                  |
+| ------------------------ | --------------------------------------- | ----------------------------------------------------- |
+| **Customer Satisfied**   | OK: hands off and continue to monitor   | Trouble ahead: investigate and stabilise the process  |
+| **Customer Unsatisfied** | Trouble now: revise the process         | Chaos: investigate, stabilise, and revise the process |
 
 Table: Table 1: The interplay between the voice of the customer and the voice of the process, with the four appropriate actions for each scenario.
 
@@ -141,13 +127,27 @@ Table: Table 1: The interplay between the voice of the customer and the voice of
 
 In our experience, the most common misconception about SPC is that quality improvement follows automatically from presenting data in SPC charts. However, SPC charts by themselves do not lead to improvement.
 
-This misconception likely stems from the view that SPC is merely a statistical technique for identifying outliers or shifts in data over time. However, SPC “is about the continual improvement of processes and outcomes. And it is first and foremost *a way of thinking* with some tools attached” [@wheeler2000].
+This misconception likely stems from the view that SPC is merely a statistical technique for identifying outliers or shifts in data over time. However, as Don Wheeler note: SPC “is about the continual improvement of processes and outcomes. And it is first and foremost *a way of thinking* with some tools attached” [@wheeler2000].
 
 Without this *way of thinking* embedded at all levels of an organisation, SPC charts are no better or worse than any other form of data display. Specifically, the thinking involves understanding variation and recognising that different actions are required depending on whether a process exhibits common or special cause variation.
 
 Furthermore, it is important to have a systematic strategy to investigate signals of special cause variation. A proper investigation requires a multidisciplinary team combining expertise in data analysis and in the structures and processes under study [@mohammed2004].
 
 Finally, without management support and buy-in to the *way of thinking*, SPC is unlikely to have any effect. In particular, it is important that managers know how to reconcile *the two voices* -- the voice of the process and the voice of the customer -- as discussed earlier.
+
+## Signal fatigue from over-sensitive SPC rules
+
+Originally, control charts employed only one test (or rule) for special causes: one or more data points outside the control limits. However, to increase the chart's sensitivity to minor sustained shifts and other patterns of non-random variation, a plethora of supplementary rules have since been developed. To name a few, we have the Western Electric rules [@we1956] (four basic rules plus many more for specialised purposes), the Nelson rules [@nelson1984] (eight rules), and the Westgard rules [@harel2008] (six rules). Most rules are based on identifying non-random patterns in the position of data points relative to the control limits, each with different diagnostic properties.
+
+Furthermore, several distinct sets of rules for runs analysis based on identifying non-random patterns relative to the centre line have been published [@anhoej2015].
+
+It may seem tempting to apply as many rules as possible to increase the chance of detecting any signs of special cause variation. However, this strategy comes at a price. While additional rules do increase the sensitivity of SPC analysis, they also raise the risk of false alarms.
+
+Apart from the risk of applying too many rules, the rules themselves may also be either overly sensitive or insufficiently sensitive. A prominent example is a commonly used set of runs rules -- including four tests for trends, shifts, and too many or too few runs respectively -- adopted by many healthcare organisations [@provost2011; @perla2011]. This particular set has been shown to produce a very high rate of false signals. For instance, in a run chart with 24 data points, the expected false positive rate is close to 50% [@anhoej2015]. The main contributor is the trend rule -- defined as five or more consecutive data points all increasing or decreasing. Short trends like this are very common, even in sequences of purely random numbers. Moreover, trend rules in general have been thoroughly studied and found to be, at best, unhelpful and, at worst, misleading [@davis1988].
+
+To make matters worse, some practitioners deliberately tighten control limits in an attempt to increase the sensitivity of the sigma rule. This behaviour often stems from another common mistake: using the overall standard deviation to calculate control limits [@wheeler2010; @wheeler2016]. As emphasised in the introduction, the overall variation is not appropriate for this purpose, as it includes both common cause and special cause variation -- ultimately inflating the control limits. Inflated limits can, in turn, prompt misguided attempts to narrow them artificially. Instead, control limits, set at ±3 SD from the centre line, should be based on the estimated within-subgroup standard deviation from rationally formed subgroups. This approach captures common cause variation and provides a sound basis for meaningful process monitoring and improvement.
+
+To avoid signal fatigue -- which, at best, results in wasted effort from chasing false signals -- we recommend that practitioners select their rules carefully, focusing on capturing patterns that are most likely to signal special cause variation in their specific context, while keeping acceptable false alarm rates.
 
 ## Automatic rephasing
 
@@ -199,13 +199,14 @@ Finally, because runs analysis is most effective for detecting minor to moderate
 
 ## Conclusion
 
-While SPC is a powerful framework for data-driven quality improvement, its effectiveness is often compromised by poor data, misuse of charts, and faulty assumptions, which can lead to wasted effort, missed opportunities, and diminished confidence in the method. Effective SPC requires understanding variation, rational subgrouping of data, careful selection of rules, and disciplined interpretation. When applied correctly, it remains a robust tool for learning, decision-making, and sustained quality improvement.
+While SPC is a powerful framework for data-driven quality improvement, its effectiveness is often compromised by poor data, insufficient management support, misuse of charts, and faulty assumptions, which can lead to wasted effort, missed opportunities, and diminished confidence in the method. Effective SPC requires understanding variation, rational subgrouping of data, careful selection of rules, and disciplined interpretation. When applied correctly, it remains a robust tool for learning, decision-making, and sustained quality improvement.
 
 ## What this paper adds to the area of knowledge
 
 While SPC is a powerful framework for data-driven quality improvement, its usefulness and effectiveness of SPC is often compromised by:
 
-- poor data, 
+- poor data,
+- insufficient management support,
 - misuse of charts, and
 - faulty assumptions.
 
