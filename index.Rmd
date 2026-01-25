@@ -117,10 +117,10 @@ The long-term goal of any improvement initiative is to establish stable processe
 
 The two voices and the corresponding four appropriate actions are summarised in Table 1.
 
-|                          | **Process Stable**                                       | **Process Unstable**                                  |
-| ------------------------ | -------------------------------------------------------- | ----------------------------------------------------- |
-| **Customer Satisfied**   | OK: continue to monitor and consider minimising variance | Trouble ahead: investigate and stabilise the process  |
-| **Customer Unsatisfied** | Trouble now: revise the process                          | Chaos: investigate, stabilise, and revise the process |
+|                          | **Process Stable**                            | **Process Unstable**                                  |
+| ------------------------ | --------------------------------------------- | ----------------------------------------------------- |
+| **Customer Satisfied**   | OK: monitor, and consider minimising variance | Trouble ahead: investigate and stabilise the process  |
+| **Customer Unsatisfied** | Trouble now: revise the process               | Chaos: investigate, stabilise, and revise the process |
 
 Table: Table 1: The interplay between the voice of the customer and the voice of the process, with the four appropriate actions for each scenario.
 
