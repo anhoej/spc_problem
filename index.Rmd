@@ -154,7 +154,7 @@ Rephasing involves splitting an SPC chart to recalculate the centre line and con
 
 Figure \@ref(fig:fig2) shows the number of hospital infections (C. diff.) before and after an intervention, which began after month 24.
 
-```{r fig2, fig.cap='Control chart illustrating two distinct time periods before and after the initiation of an initiative to reduce the rate of hospital infections. Baseline period: months 1-24. Implementation period: months 25-36'}
+```{r fig2, fig.cap='Control chart illustrating two distinct time periods before and after the initiation of an initiative to reduce the rate of hospital infections. Baseline period: months 1-24. Implementation period: months 25-36.'}
 pbc(month, n,
     data  = cdi,
     chart = 'i',
